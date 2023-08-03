@@ -8,9 +8,15 @@ const adminEmails = ["coutinhocoutinholucas@gmail.com"];
 export const authOptions = {
   providers: [
     GoogleProvider({
-      clientId:
-        "495319500881-ns27iaei017fcio7gn06s5b9umcookgn.apps.googleusercontent.com",
-      clientSecret: "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",
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_SECRET,
+      authorization: {
+        params: {
+          prompt: "consent",
+          access_type: "offline",
+          response_type: "code",
+        },
+      },
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),
