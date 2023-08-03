@@ -4,7 +4,7 @@ import { useState } from "react";
 import Spinner from "./Spinners";
 import { ReactSortable } from "react-sortablejs";
 import { useEffect } from "react";
-
+import Image from "next/image";
 export default function ProductForm({
   _id,
   title: existingTitle,
@@ -140,7 +140,14 @@ export default function ProductForm({
                 key={link}
                 className="h-24 bg-white p-4 shadow-sm rounded-lg"
               >
-                <img src={link} className="rounded-lg" />
+                {/* <img src={link} className="rounded-lg" /> */}
+                <Image
+                  className="rounded-lg"
+                  src={link}
+                  width={50}
+                  height={50}
+                  alt="Picture of the author"
+                />
               </div>
             ))}
         </ReactSortable>
