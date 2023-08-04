@@ -3,20 +3,17 @@ import { MongoDBAdapter } from "@auth/mongodb-adapter";
 import NextAuth, { getServerSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
-const adminEmails = ["coutinhocoutinholucas@gmail.com"];
+const adminEmails = [
+  "coutinhocoutinholucas@gmail.com",
+  "smartmanagerlda@gmail.com",
+  "lyrthus@gmail.com",
+];
 
 export const authOptions = {
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code",
-        },
-      },
     }),
   ],
   adapter: MongoDBAdapter(clientPromise),

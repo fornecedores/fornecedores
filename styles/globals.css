@@ -18,11 +18,11 @@ label{
 }
 
 .btn-primary{
-    @apply bg-white text-blue-900 px-4 rounded-md;
+    @apply bg-gray-900 text-white px-4 rounded-md;
 }
 
 table.basic{
-    @apply w-full bg-blue-800 shadow-md;
+    @apply w-full shadow-md;
 }
 
 table.basic tr td{
@@ -30,11 +30,11 @@ table.basic tr td{
 }
 
 table.basic thead tr td{
-    @apply text-sm text-white border-b border-white px-4 py-2;
+    @apply text-sm text-gray-600 border-b border-blue-100 px-4 py-2;
 }
 
 table.basic tbody tr td{
-    @apply text-sm text-white border-b border-white px-4 py-2;
+    @apply text-sm text-gray-600 border-b border-blue-100 px-4 py-2;
 }
 
 
@@ -50,7 +50,7 @@ table.basic a{
 }
 
 .btn-default{
-    @apply bg-white text-blue-900 px-4 rounded-md;
+    @apply bg-gray-900 text-white px-4 rounded-md;
 }
 
 .btn-default, .btn-red{
