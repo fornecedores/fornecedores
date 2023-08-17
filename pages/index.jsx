@@ -5,7 +5,7 @@ export default function Home() {
   const { data: session } = useSession();
   return (
     <Layout>
-      <div className="text-white flex justify-between">
+      <div className="text-gray-900 flex justify-between">
         <h2>
           Ola, <b>{session?.user?.name}</b>
         </h2>

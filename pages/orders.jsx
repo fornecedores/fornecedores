@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 export default function OrdersPage() {
+  // Agua
   const [orders, setOrders] = useState([]);
   useEffect(() => {
     axios.get("/api/orders").then((response) => {
